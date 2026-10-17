@@ -1,0 +1,85 @@
+# Cetus Farm and Vault Audits
+
+This folder collects farming and vault audits. Farming manages incentives for deposited CLMM positions; vaults manage liquidity, reinvestment and rebalancing. Each report identifies the contracts and dependencies it reviewed.
+
+## Audit Reports
+
+Reports are listed newest first by report date or latest follow-up date. The date column shows the review period when provided, otherwise the report date.
+
+| Module | Auditor | Audit Duration or Date | Final Commit / Reviewed Scope | Report |
+| --- | --- | --- | --- | --- |
+| Vault | OtterSec | 2024-03-01 - 2024-03-20; follow-up: 2025-05-27 - 2025-06-06 | [2 listed revisions](#a26) | [PDF](reports/2024-03-30-vaults-ottersec-with-2025-follow-up.pdf) |
+| Vault | OtterSec | 2024-03-01 - 2024-03-20 | [Reviewed: `c23ab34`](#a27) | [PDF](reports/Mar%202024-Vault%20Audit%20by%20OtterSec.pdf) |
+| Vault | MoveBit | 2024-02-23 - 2024-02-27 | [2 listed revisions](#a24) | [PDF](reports/Feb%202024-Vault%20Audit%20by%20MoveBit.pdf) |
+| Farm | MoveBit | 2023-12-29 - 2024-01-05 | [4 listed revisions](#a25) | [PDF](reports/Jan%202024-Farm%20Audit%20by%20MoveBit.pdf) |
+
+A final commit is labeled where the report explicitly identifies it. Otherwise, the reviewed revision or complete revision list is reproduced below. Each report applies to its stated code and scope.
+
+## Scope and Findings
+
+<a id="a26"></a>
+### 2025-06-06 - Vault - OtterSec
+
+**Scope:** vaults at c23ab34; follow-up includes PR#1 and compensation-repository revision 3eab21e.
+
+**Code revisions recorded in the report:**
+- `c23ab34`
+- `3eab21e (compensation repository); PR#1 also reviewed`
+
+**Source:** https://github.com/CetusProtocol/vaults
+
+**Findings:** 7 findings: 1 medium and 2 low vulnerabilities resolved; 4 general findings
+
+**Methodology:** Design and implementation review; methodology is described in the Procedure appendix.
+
+Cover retains March 30, 2024; the text records the May-June 2025 follow-up. General finding numbering differs from the earlier report.
+
+<a id="a27"></a>
+### 2024-03-30 - Vault - OtterSec
+
+**Scope:** vaults at c23ab34; liquidity management, fee/reward reinvestment and rebalancing.
+
+**Code revisions recorded in the report:**
+- `c23ab34`
+
+**Source:** https://github.com/CetusProtocol/vaults
+
+**Findings:** 8 findings: 1 medium and 2 low vulnerabilities resolved; 5 general findings
+
+**Methodology:** Design and implementation review; methodology is described in the Procedure appendix.
+
+<a id="a24"></a>
+### 2024-02-29 - Vault - MoveBit
+
+**Scope:** vaults: fetcher, ACL, router, utils, vaults source and manifest.
+
+**Code revisions recorded in the report:**
+- `464c943caf624e3434986280b4a02e275e6a8bba`
+- `c23ab3489af813cad58a4cdfbad0f2600a40d06a`
+
+**Source:** https://github.com/CetusProtocol/vaults
+
+**Findings:** 4 findings: 2 fixed, 2 acknowledged; acknowledged items include major centralization and medium rewards loss
+
+**Methodology:** Architecture review, unit testing and manual review, as listed in Project Information.
+
+ROU-1 rewards loss and VAU-1 centralization are acknowledged.
+
+<a id="a25"></a>
+### 2024-01-19 - Farm - MoveBit
+
+**Scope:** stable-farming source and manifest, with CLMM rewarder interactions described in the findings.
+
+**Code revisions recorded in the report:**
+- `cab10270ca5567772b47bad65bc2db0953bcc55e`
+- `8f83fca210929aa86053e2338c00204450170c46`
+- `26a210c342f590739f9360d1195d62180c2e4b54`
+- `61e18eb5ed3ac7c9bc84811a472fa03725ecb6a8`
+
+**Source:** https://github.com/CetusProtocol/cetus-clmm-sui
+
+**Findings:** 9 fixed: 4 major, 5 minor
+
+**Methodology:** Architecture review, unit testing and manual review, as listed in Project Information.
+
+Acknowledged findings are recorded separately from fixed or resolved findings. Audit reports apply to the reviewed versions and do not cover subsequent changes automatically.
