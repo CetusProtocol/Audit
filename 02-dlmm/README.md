@@ -8,6 +8,7 @@ Reports are listed newest first by report date or latest follow-up date. The dat
 
 | Module | Auditor | Audit Duration or Date | Reviewed Commit / Scope | Report |
 | --- | --- | --- | --- | --- |
+| DLMM | CertiK | 2026-10-16 | [Reviewed: `4f6e1fd913`](#certik-dlmm-2026-10-16) | [PDF](reports/Oct%202026-DLMM%20Audit%20by%20Certik.pdf) |
 | DLMM - Upgrade audit | Asymptotic | 2026-06-06 | [cetus_dlmm v9](#asym-dlmm-upgrade-2026) | [Online report](https://cetus.asymptotic.tech/dlmm/upgrade-audit-v8-v9.html) |
 | DLMM - Manual audit | Asymptotic | 2026-01-15 | [cetus_dlmm and dlmm_router; linked by the project index](#asym-dlmm-manual-2026) | [Online report](https://info.asymptotic.tech/Cetus-DLMM-Audit-Report-294159bbd66d8039a322f6fd936b66b8) |
 | DLMM | Asymptotic | 2025-11-21 | [Final: `974933c29a`](#a11) | [PDF](reports/Nov%202025-DLMM%20Audit%20by%20Asymptotic.pdf) |
@@ -18,6 +19,41 @@ Reports are listed newest first by report date or latest follow-up date. The dat
 A final commit is labeled where the report explicitly identifies it. Otherwise, the reviewed revision or complete revision list is reproduced below. Each report applies to its stated code and scope.
 
 ## Scope and Findings
+
+<a id="certik-dlmm-2026-10-16"></a>
+### 2026-10-16 - DLMM - CertiK
+
+**Report:** [October 2026 security assessment](reports/Oct%202026-DLMM%20Audit%20by%20Certik.pdf)
+
+**Scope:** DLMM core contracts and Cetus-maintained utility functions reviewed in the DLMM context. The appendix lists the reviewed files across the reported revisions; external framework dependencies retain the report's stated assumptions.
+
+**Code revisions recorded in the report:**
+- `57ba7dc0c7471d99e911202bb68762373c8e79f4`
+- `160846ec4eb36bd5b9db416c015069a8c7d7e759`
+- `f442ca0db0bd8c0e502029831fe3a1a2e960d038`
+- `80530ae53d162e4da26aeb665de305e17fb7768e`
+- `098cf12dcf1a499362592e7faf1c84473313d936`
+- `4acdcb59b3ca08981c035459cc4de787a783d6b0`
+- `bdd18518b29fb17e55b33566ebd90f18e243c44f`
+- `abf32f00e8ff039833f0a4da9110d75ce21c05aa`
+- `81af9930a0341a689b71dea6c39bad0a3997b08d`
+- `cd0c803861e569be4a50defba26ca9d10725272c`
+- `d1037ffc7ff7ffd314411d1a723aab0e2551d290`
+- `324397b6df2d2af9444024482890d0bcf6fdb706`
+- `741b9240616961549305c56074de9e467fdfd270`
+- `2fba63d1dddbdd89cb9b59241af7d2f077544f6f`
+- `0bf9b507c40c3c91c080354d1528053d8d1befb6`
+- `f317a94e34ebe558226027543884ec27a9b81285`
+- `e43f85791b90c54c54d3d494f2c225f6df85d2c3`
+- `4f6e1fd913b1439ad6bcf903ee8ca8a12694238b`
+
+**Source:** https://github.com/CetusProtocol/cetus-dlmm
+
+**Findings:** 46 findings: 35 resolved and 11 acknowledged. Both major and both medium findings are resolved. Minor findings: 13 resolved and 3 acknowledged. Informational findings: 18 resolved and 7 acknowledged. The centralization finding is acknowledged; no critical findings are recorded.
+
+**Methodology:** Manual review and static analysis.
+
+The final report includes CED-45 through CED-51 from the earlier stepwise findings: CED-46 is resolved, while CED-45, CED-47, CED-48, CED-49, CED-50 and CED-51 are acknowledged.
 
 <a id="asym-dlmm-upgrade-2026"></a>
 ### 2026-06-06 - DLMM - Upgrade audit - Asymptotic

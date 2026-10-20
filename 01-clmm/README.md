@@ -8,6 +8,7 @@ Reports are listed newest first by report date or latest follow-up date. The dat
 
 | Module | Auditor | Audit Duration or Date | Reviewed Commit / Scope | Report |
 | --- | --- | --- | --- | --- |
+| CLMM | CertiK | 2026-10-16 | [Reviewed: `ffd7345d8b`](#certik-clmm-2026-10-16) | [PDF](reports/Oct%202026-CLMM%20Audit%20by%20Certik.pdf) |
 | CLMM | MoveBit | 2026-09-11 - 2026-09-14 | [Reviewed: `f7f62b49b7`](#a09) | [PDF](reports/Sep%202026-CLMM%20Audit%20by%20MoveBit.pdf) |
 | CLMM - Upgrade audit | Asymptotic | 2026-06-06 | [cetus_clmm v14](#asym-clmm-upgrade-2026) | [Online report](https://cetus.asymptotic.tech/clmm/upgrade-audit-v13-v14.html) |
 | CLMM - Formal verification update | Asymptotic | 2026-06-06 | [cetus_clmm v14 specifications](#asym-clmm-fv-update-2026) | [Online report](https://cetus.asymptotic.tech/clmm/upgrade-fv-v13-v14.html) |
@@ -23,6 +24,27 @@ Reports are listed newest first by report date or latest follow-up date. The dat
 A final commit is labeled where the report explicitly identifies it. Otherwise, the reviewed revision or complete revision list is reproduced below. Each report applies to its stated code and scope.
 
 ## Scope and Findings
+
+<a id="certik-clmm-2026-10-16"></a>
+### 2026-10-16 - CLMM - CertiK
+
+**Report:** [October 2026 security assessment](reports/Oct%202026-CLMM%20Audit%20by%20Certik.pdf)
+
+**Scope:** CLMM pool, factory, configuration, rewarder, partner, ACL, position, tick, pool-creation, utility and math files listed in the scope appendix.
+
+**Code revisions recorded in the report:**
+- `390ee5b030de44a782dc0fc6f23061611a92a64b`
+- `4b243d4bb07aaed89dd44d8f1991cb9a54a5f586`
+- `bda1995f7f704548c2c3954fa3014dc38c3f4c26`
+- `0df3adad7d3e41c24e64e418d38173c48221fe32`
+- `29decc06fe3246af77a3d54166954f919fdd48c2`
+- `ffd7345d8bb3d11023e8c119a9d056400626b284`
+
+**Source:** https://github.com/CetusProtocol/cetus-clmm-sui
+
+**Findings:** 19 findings: 14 resolved and 5 acknowledged. All 4 minor findings are resolved; 10 informational findings are resolved and 4 acknowledged; the centralization finding is acknowledged. The report records no critical, major or medium findings. Two optimization entries are listed separately.
+
+**Methodology:** Manual review and static analysis.
 
 <a id="a09"></a>
 ### 2026-09-14 - CLMM - MoveBit
